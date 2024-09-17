@@ -12,9 +12,10 @@ public class Account {
         this.balance = 200;
     }
     // non-default constructor (Parametrized Constructor)
-    public Account(String id, String name) {
+    public Account(String id, String name, int balance) {
         this.id = id;
         this.name = name;
+        this.balance = balance;
     }
 
     public void display() {
@@ -44,8 +45,23 @@ public class Account {
         if (amount <= this.balance) {
             this.balance -= amount;
         } else {
-            System.out.println("Amount exceeded balance");
+            System.out.println("\nAmount exceeded balance");
         }
         return this.balance;
+    }
+
+    public int transferTo(Account another, int amount) {
+        if (amount <= this.balance) {
+            this.balance -= amount;
+            another.balance += amount;
+        } else {
+            System.out.println("\nAmount exceeded balance");
+        }
+        return this.balance;
+    }
+    
+    public String toString() {
+        return ("The Account ID is : " + this.id + ", the Name of the account holder is :" + this.name
+                + ", the balance is : " + this.balance);
     }
 }
