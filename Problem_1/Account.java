@@ -6,11 +6,12 @@ public class Account {
     private int balance;
 
     // No argument constructor
-    public Account() {
-        this.id = "1234";
-        this.name = "John";
-        this.balance = 200;
-    }
+    // public Account() {
+    //     this.id = "1234";
+    //     this.name = "John";
+    //     this.balance = 200;
+    // }
+
     // non-default constructor (Parametrized Constructor)
     public Account(String id, String name, int balance) {
         this.id = id;
@@ -18,9 +19,9 @@ public class Account {
         this.balance = balance;
     }
 
-    public void display() {
-        System.out.println(this.id + ", " + this.name + ", " + this.balance);
-    }
+    // public void display() {
+    //     System.out.println(this.id + ", " + this.name + ", " + this.balance);
+    // }
 
     //  Methods
 
@@ -59,7 +60,7 @@ public class Account {
         }
         return this.balance;
     }
-    
+
     public String toString() {
         return ("The Account ID is : " + this.id + ", the Name of the account holder is :" + this.name
                 + ", the balance is : " + this.balance);
